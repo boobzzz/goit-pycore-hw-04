@@ -13,7 +13,7 @@ def total_salary(path: Path) -> Tuple:
     total = 0
     with open(path, mode='r', encoding='utf-8') as file:
         while True:
-            line = file.readline()
+            line = file.readline().strip()
             if not line:
                 break
             total += int(line.split(',')[1])
